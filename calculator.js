@@ -2,19 +2,39 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (x=0) {
+    this.pi=3.14;
+    this.currValue = x;
   }
-  add () {
+  add (addedWith) {
+    this.currValue+= addedWith;
+    return this;
   }
-  substract () {
+  substract (subtrWith) {
+    this.currValue-= subtrWith;
+    return this;
   }
-  multiply () {
+  multiply (multWith) {
+    this.currValue*= multWith;
+    return this;
   }
-  divide () {
+  divide (divWith) {
+    this.currValue/= divWith;
+    return this;
   }
-  square () {
+  square (jumlahPangkat) {
+    var temp = this.currValue;
+    for (let i = 1; i<=jumlahPangkat; i++){
+      this.currValue*= temp;
+    }
+    return this;
   }
-  squareRoot () {
+  squareRoot (jumlahAkarPangkat) {
+    let temp = this.currValue;
+    for (let i= 1; i<= jumlahAkarPangkat; i++){
+      this.currValue/= temp;
+    }
+    return this;
   }
 }
 
