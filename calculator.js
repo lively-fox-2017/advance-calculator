@@ -3,18 +3,32 @@
 class Calculator {
   //write your code here
   constructor () {
+    this.val=0 ;
+    this.pi = 3.14 ;
   }
-  add () {
+  add (num) {
+    this.val += num ;
+    return this ;
   }
-  substract () {
+  substract (num) {
+    this.val -= num ;
+    return this ;
   }
-  multiply () {
+  multiply (num) {
+    this.val *= num ;
+    return this ;
   }
-  divide () {
+  divide (num) {
+    this.val /= num ;
+    return this ;
   }
-  square () {
+  square (num) {
+    this.val = Math.pow(this.val, num) ;
+    return this ;
   }
-  squareRoot () {
+  squareRoot (num) {
+    this.val = Math.sqrt(this.val,num) ;
+    return this ;
   }
 }
 
@@ -29,3 +43,7 @@ class Calculator {
 module.exports = {
   Calculator
 }
+
+let itung = new Calculator;
+
+console.log(itung.add(3).add(3).substract(1).square(2).squareRoot(2));
