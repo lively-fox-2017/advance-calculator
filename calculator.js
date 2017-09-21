@@ -3,18 +3,36 @@
 class Calculator {
   //write your code here
   constructor () {
+  this.number = 0;
+  this.phi = 3.14;
+}
+  add (numAdd) {
+  this.number += numAdd;
+  return this;
   }
-  add () {
+  substract (numSubstract) {
+   this.number -= numSubstract;
+   return this;
   }
-  substract () {
+  multiply (numMultiply) {
+    this.number *= numMultiply;
+    return this;
   }
-  multiply () {
+  divide (numDivide) {
+    this.number /= numDivide;
+    return this;
   }
-  divide () {
-  }
-  square () {
+  square (numSquare) {
+    this.number = Math.pow(this.number, numSquare);
+    return this;
   }
   squareRoot () {
+   this.number = Math.sqrt(this.number);
+    return this;
+  }
+  circle(){
+    this.number = this.phi*this.number*this.number;
+    return this;
   }
 }
 
