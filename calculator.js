@@ -13,7 +13,10 @@ class Calculator {
         this.num -= numSubstract
         return this
     }
-    multiply() {}
+    multiply(numX) {
+        this.num *= numX
+        return this
+    }
     divide() {}
     square() {}
     squareRoot() {}
