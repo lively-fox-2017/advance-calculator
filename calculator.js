@@ -2,29 +2,51 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor(init = 0) {
+    this.number = init;
+    this.PIVAL = Math.PI;
   }
-  add () {
+  // Constanta PI
+  get PI() {
+    return Math.PI;
   }
-  substract () {
+  add(num) {
+    this.number += num;
+    return this;
   }
-  multiply () {
+  substract(num) {
+    this.number -= num;
+    return this;
   }
-  divide () {
+  multiply(num) {
+    this.number *= num;
+    return this;
   }
-  square () {
+  divide(num) {
+    this.number /= num;
+    return this;
   }
-  squareRoot () {
+  square() {
+    this.number = Math.pow(this.number, 2);
+    return this;
+  }
+  power(num) {
+    this.number = Math.pow(this.number, num);
+    return this;
+  }
+  squareRoot() {
+    this.number = Math.sqrt(this.number);
+    return this;
   }
 }
 
 /** note : you can use several features from ecmascript, such as:
-* - Classes
-* - Default Parameters
-* - Destructured Assignment
-* - Template Literals
-* - Method Chaining
-*/
+ * - Classes
+ * - Default Parameters
+ * - Destructured Assignment
+ * - Template Literals
+ * - Method Chaining
+ */
 
 module.exports = {
   Calculator
