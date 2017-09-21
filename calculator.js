@@ -4,8 +4,8 @@ class Calculator {
     //write your code here
     constructor() {
         this.num = 0
-        this.pi = 3.14
     }
+
     add(numAdd) {
         this.num += numAdd
         return this
@@ -31,7 +31,7 @@ class Calculator {
         return this
     }
     wideCircle() {
-        this.num = this.pi * this.num * this.num
+        this.num = Math.PI * (this.num * this.num)
         return this
     }
 }
