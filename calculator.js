@@ -2,22 +2,42 @@
 
 class Calculator {
   //write your code here
-  constructor () {
+  constructor (angka) {
+    this.angka = angka
   }
-  add () {
+  add (input) {
+    this.angka = this.angka + input
+    return this
   }
-  substract () {
+  substract (input) {
+    this.angka = this.angka - input
+    return this
   }
-  multiply () {
+  multiply (input) {
+    this.angka = this.angka * input
+    return this
   }
-  divide () {
+  divide (input) {
+    this.angka = this.angka / input
+    return this
   }
-  square () {
+  square (input) {
+    this.angka = Math.pow(this.angka, input)
+    return this
   }
   squareRoot () {
+    this.angka = Math.sqrt(this.angka)
+    return this
+  }
+  konstantaPi () {
+    this.angka = Math.PI*(Math.pow(this.angka,2))
+    return this
   }
 }
 
+let Hitung = new Calculator(5)
+console.log(Hitung.add(6).substract(4).multiply(2).divide(2).square(2).squareRoot());
+console.log(Hitung.konstantaPi()); 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
