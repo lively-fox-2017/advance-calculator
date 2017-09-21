@@ -21,6 +21,11 @@ class Calculator {
     this.number /= i
     return this
   }
+  radius (i) {
+    const pi = 3.14
+    this.number = pi * (i * i)
+    return this
+  }
   square (i) {
     
     this.number = Math.pow(i,2)
@@ -32,7 +37,7 @@ class Calculator {
   }
 
   print () {
-  return this.number
+  return `Hasilnya adalah ${this.number}` 
   }
 }
 
@@ -42,8 +47,11 @@ let Calc = new Calculator ()
 // Calc.multiply(2)
 // //Calc.squareRoot(2)
 // console.log(Calc.print())
+//var output = `radius nya ${Calc.radius()}`;
 
-console.log(Calc.add(2).multiply(2).print());
+console.log(Calc.radius(7))
+
+console.log(Calc.add(45).substract(2).print());
 /** note : you can use several features from ecmascript, such as:
 * - Classes
 * - Default Parameters
