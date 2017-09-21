@@ -2,14 +2,19 @@
 
 class Calculator {
 
-  constructor () {
+  constructor (result = 1) {
 
-    this.pi = 22/7;
-    this.result = 0;
+    this.result = result;
 
   }
 
-  add (num) {
+  piValue() {
+
+    return 22/7;
+
+  }
+
+  add (num = 1) {
 
     this.result += num;
 
@@ -17,7 +22,7 @@ class Calculator {
 
   }
 
-  substract (num) {
+  substract (num = 1) {
 
     this.result -= num;
 
@@ -25,7 +30,7 @@ class Calculator {
 
   }
 
-  multiply (num) {
+  multiply (num = 1) {
 
     this.result *= num;
 
@@ -33,7 +38,7 @@ class Calculator {
 
   }
 
-  divide (num) {
+  divide (num = 1) {
 
     this.result /= num;
 
@@ -49,7 +54,7 @@ class Calculator {
 
   }
 
-  pow(num) {
+  pow(num = 1) {
 
     this.result = Math.pow(this.result, num);
 
