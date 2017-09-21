@@ -36,6 +36,9 @@ class Calculator {
     }
     return this;
   }
+  getCurrValue(){
+    return this.currValue;
+  }
 }
 
 /** note : you can use several features from ecmascript, such as:
