@@ -6,4 +6,4 @@ const { Calculator } = require("./calculator.js")
 
 
 let count = new Calculator()
-console.log(count.add(5).add(5).substract(3).multiply(7).divide(7));
+console.log(count.add(5).add(5).substract(1).multiply(9).divide(9).squareRoot());

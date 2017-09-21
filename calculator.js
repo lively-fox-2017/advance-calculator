@@ -25,7 +25,10 @@ class Calculator {
         this.num = Math.pow(this.num, numSquare);
         return this
     }
-    squareRoot() {}
+    squareRoot() {
+        this.num = Math.sqrt(this.num)
+        return this
+    }
 }
 
 /** note : you can use several features from ecmascript, such as:
