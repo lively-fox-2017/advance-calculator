@@ -9,7 +9,10 @@ class Calculator {
         this.num += numAdd
         return this
     }
-    substract() {}
+    substract(numSubstract) {
+        this.num -= numSubstract
+        return this
+    }
     multiply() {}
     divide() {}
     square() {}
