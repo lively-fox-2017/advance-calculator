@@ -3,7 +3,8 @@
 class Calculator {
     //write your code here
     constructor() {
-        this.num = 0;
+        this.num = 0
+        this.pi = 3.14
     }
     add(numAdd) {
         this.num += numAdd
@@ -27,6 +28,10 @@ class Calculator {
     }
     squareRoot() {
         this.num = Math.sqrt(this.num)
+        return this
+    }
+    wideCircle() {
+        this.num = this.pi * this.num * this.num
         return this
     }
 }
