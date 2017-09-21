@@ -2,49 +2,51 @@
 
 class Calculator {
   //write your code here
-  constructor (input) {
+  constructor(input = 0) {
     this.input = input;
+    // this.pi = 3.14;
   }
 
-  add (num) {
+  add(num) {
     this.input += num;
     return this;
   }
 
-  substract (num) {
+  substract(num) {
     this.input -= num;
     return this;
   }
 
-  multiply (num) {
+  multiply(num) {
     this.input *= num;
     return this;
   }
 
-  divide (num) {
+  divide(num) {
     this.input /= num;
     return this;
   }
 
-  square (num) {
-    this.input **= num;
+  square(exponent = 2) {
+    this.input = Math.pow(this.input, exponent)
     return this;
   }
 
-  squareRoot () {
+  squareRoot() {
     this.input = Math.sqrt(this.input);
     return this;
   }
-}
 
-let test = new Calculator(16);
-// console.log(test.add(2));
-// console.log(test.substract(8));
-// console.log(test.multiply(2));
-// console.log(test.divide(4));
-// console.log(test.square(4));
-// console.log(test.squareRoot());
-console.log(test.add(2).substract(8).multiply(2).divide(4).square(4).squareRoot());
+  luasLingkaran(jariJari) {
+    this.input = (Math.PI * Math.pow(jariJari, 2)).toFixed(2);
+    return this;
+  }
+
+  kelilingLingkaran(jariJari) {
+    this.input = ((2 * Math.PI) * jariJari).toFixed(2);
+    return this;
+  }
+}
 
 /** note : you can use several features from ecmascript, such as:
 * - Classes
