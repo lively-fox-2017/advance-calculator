@@ -17,8 +17,14 @@ class Calculator {
         this.num *= numX
         return this
     }
-    divide() {}
-    square() {}
+    divide(numDivide) {
+        this.num /= numDivide
+        return this
+    }
+    square(numSquare) {
+        this.num = Math.pow(this.num, numSquare);
+        return this
+    }
     squareRoot() {}
 }
 
